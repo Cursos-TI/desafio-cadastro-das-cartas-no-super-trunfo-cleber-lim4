@@ -104,23 +104,20 @@ int main(){
     printf("PIB per Capita: %.2f\n", pibper_capita_c2);
     printf("Seu super poder é de: %f\n", super_poder2);
 
-    printf("=====COMPARAÇÃO ENTRE AS CARTAS | (0) Perdeu! - (1) Ganhou!=====\n");
+    printf("=====Comparação de cartas (Atributo: População): =====\n");
 
-    //Atribuindo variáveis que irão receber os resultados das comparações
-    int densi_maior, densi_menor;
-    int poder_maior, poder_menor;
+    printf("Carta 01: %s (%s): %i\n", nome_cidade1, cod_carta1, populacao1);
+    printf("Carta 01: %s (%s): %i\n", nome_cidade2, cod_carta2, populacao2);
 
-    densi_maior = dens_pop_invertida1 > dens_pop_invertida2;
-    densi_menor = dens_pop_invertida1 < dens_pop_invertida2;
+    if (populacao1 > populacao2){
 
-    poder_maior = super_poder1 > super_poder2;
-    poder_menor = super_poder1 < super_poder2;
+        printf("Resultado: Carta 1 (%s) venceu!\n", nome_cidade1);
+        
+    } else{
 
-    //Comparando as cartas
-    printf("A densidade Pop. Invertida de carta 01 foi maior? (%d) --> (%f)\n", densi_maior, dens_pop_invertida1);
-    printf("A densidade Pop. Invertida de carta 02 foi maior? (%d) --> (%f)\n", densi_menor, dens_pop_invertida2);
-    printf("Super poder de carta 01 foi maior? (%d)\n", poder_maior);
-    printf("Super poder de carta 02 foi maior? (%d)\n", poder_menor);
+        printf("Resultado: Carta 2 (%s) venceu!\n", nome_cidade2);
+
+    }
 
     return 0;
 }
